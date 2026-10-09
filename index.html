@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7ef">
+  <meta name="description" content="GreenQuest AI helps you discover nature through outdoor missions powered by open-source AI.">
+  <title>GreenQuest AI — Touch Grass</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="GreenQuest AI home">
+      <span class="brand-icon">✳</span>
+      <span>greenquest<span class="brand-ai">.ai</span></span>
+    </a>
+
+    <div class="nav-right">
+      <span class="open-label"><span class="status-dot"></span> OPEN-SOURCE AI</span>
+      <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✳</span> YOUR DAILY DOSE OF OUTSIDE</div>
+        <h1>Your world is<br>waiting <span>outside.</span></h1>
+        <p class="hero-description">
+          Less scrolling. More exploring. Your AI-powered nature
+          companion turns ordinary days into little adventures.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-button" id="start-button">
+            Find my adventure <span>↗</span>
+          </button>
+          <span class="no-pressure">No pressure. Just nature. 🌱</span>
+        </div>
+
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true">
+            <span>🌿</span><span>🌻</span><span>🍃</span>
+          </div>
+          <p><strong id="hero-mission-count">0 adventures</strong><br>completed in your session</p>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a sunny nature landscape">
+        <div class="sun"></div>
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+        <div class="art-label"><span>✳</span> YOUR OUTSIDE ERA</div>
+        <div class="flower flower-one">✿</div>
+        <div class="flower flower-two">✿</div>
+        <div class="flower flower-three">✿</div>
+        <div class="art-caption">take the scenic route.</div>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A LITTLE ADVENTURE GOES A LONG WAY</p>
+          <h2>Today's little mission<span>.</span></h2>
+        </div>
+        <span class="date-chip" id="today-date">YOUR DAY, YOUR PACE</span>
+      </div>
+
+      <div class="mission-layout">
+        <article class="mission-card">
+          <div class="mission-top">
+            <span class="mission-badge"><span>✳</span> AI CURATED MISSION</span>
+            <span class="difficulty" id="mission-difficulty">EASY DOES IT</span>
+          </div>
+
+          <div class="mission-illustration" id="mission-emoji" aria-hidden="true">🌿</div>
+          <p class="mission-category" id="mission-category">NOTICE THE LITTLE THINGS</p>
+          <h3 id="mission-title">Meet your neighborhood plants.</h3>
+          <p class="mission-description" id="mission-description">
+            Take a short walk and notice three different plants.
+            Look at their leaves, shapes, and colors.
+          </p>
+
+          <div class="mission-meta">
+            <span>◷ <span id="mission-duration">10 minutes</span></span>
+            <span>✦ <span id="mission-xp">50 XP</span></span>
+          </div>
+
+          <div class="mission-buttons">
+            <button class="primary-button" id="complete-button">I did it! +50 XP ✓</button>
+            <button class="secondary-button" id="new-mission-button">↻ New mission</button>
+          </div>
+          <p class="mission-status" id="mission-status" role="status" aria-live="polite">
+            Your next adventure is waiting.
+          </p>
+        </article>
+
+        <aside class="side-panel">
+          <div class="ai-card">
+            <div class="ai-heading">
+              <span class="ai-symbol">✳</span>
+              <span class="ai-status" id="ai-status"><span class="status-dot"></span> LOCAL MODE</span>
+            </div>
+            <p class="eyebrow">MEET YOUR NATURE BUDDY</p>
+            <h3>A little AI.<br>A lot more outside.</h3>
+            <p id="ai-description">
+              Your mission buddy creates fresh ideas to help you reconnect
+              with the world around you.
+            </p>
+            <button class="text-button" id="ai-button">Ask AI for a mission ↗</button>
+            <p class="ai-footnote">Open-weight AI via Ollama · Optional</p>
+          </div>
+
+          <div class="stats-card">
+            <p class="eyebrow">YOUR GROWTH GARDEN</p>
+            <div class="stat-row">
+              <span class="stat-icon">🌱</span>
+              <div><span class="stat-label">Experience points</span><strong id="xp-value">0 XP</strong></div>
+            </div>
+            <div class="stat-row">
+              <span class="stat-icon">🧭</span>
+              <div><span class="stat-label">Explorer level</span><strong id="level-value">Level 1 · Seedling</strong></div>
+            </div>
+            <div class="stat-row">
+              <span class="stat-icon">🌼</span>
+              <div><span class="stat-label">Missions completed</span><strong id="completed-value">0 adventures</strong></div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="level-progress"></div></div>
+            <p class="progress-caption" id="progress-caption">100 XP to your next level</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="how-section">
+      <p class="eyebrow">SMALL STEPS. REAL-WORLD MAGIC.</p>
+      <h2>Less app. More <span>happening.</span></h2>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span><span class="step-emoji">🪴</span>
+          <h3>Pick a mission</h3>
+          <p>Get an easy, fun idea inspired by your surroundings.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span><span class="step-emoji">🚶</span>
+          <h3>Head outside</h3>
+          <p>Put your phone away and enjoy a little real-world adventure.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span><span class="step-emoji">🌻</span>
+          <h3>Grow your XP</h3>
+          <p>Celebrate what you explored and keep building the habit.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-icon">✳</span> greenquest.ai</a>
+    <p>Made for the love of outside. 🌍</p>
+    <span>OPEN INNOVATION · OPEN AIR</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
